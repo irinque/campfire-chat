@@ -1,6 +1,7 @@
 package me.irinque.CampfireChat;
 
 import me.irinque.CampfireChat.handlers.PlayerJoin;
+import me.irinque.CampfireChat.handlers.PlayerQuit;
 import me.irinque.CampfireChat.loaders.Config;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.Bukkit;
@@ -23,6 +24,7 @@ public final class Main extends JavaPlugin
         Bukkit.getScheduler().runTaskAsynchronously(this, new Config());
 
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
+        getServer().getPluginManager().registerEvents(new PlayerQuit(), this);
 
         getServer().getLogger().info("§a[CampfireChat] Plugin is ready");
     }

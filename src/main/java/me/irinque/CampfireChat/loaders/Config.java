@@ -6,7 +6,7 @@ import java.io.File;
 
 public class Config implements Runnable
 {
-    File file_config = new File("plugins/CampfireChat/config.yml");
+    File file_config = new File("plugins/campfire-chat/config.yml");
     public File get_file_config() {return file_config;}
 
     static Main plugin = Main.getInstance();
@@ -17,6 +17,9 @@ public class Config implements Runnable
         {
             plugin.getConfig().set("custom-join.toggle", true);
             plugin.getConfig().set("custom-join.message", "§a[+] {player}");
+
+            plugin.getConfig().set("custom-quit.toggle", true);
+            plugin.getConfig().set("custom-quit.message", "§c[-] {player}");
 
             plugin.saveConfig();
 
