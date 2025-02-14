@@ -24,6 +24,12 @@ public class Config implements Runnable
             plugin.getConfig().set("global-chat.toggle", true);
             plugin.getConfig().set("global-chat.message", "{world_prefix} §f{player} >> {message}");
 
+            plugin.getConfig().set("local-chat.toggle", true);
+            plugin.getConfig().set("local-chat.radius", 50);
+            plugin.getConfig().set("local-chat.message", "§7{player} >> {message}");
+
+            plugin.getConfig().set("message.NoRecipients", "§4 Your message was not seen by anyone.");
+
             plugin.saveConfig();
 
         }

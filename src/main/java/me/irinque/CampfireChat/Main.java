@@ -32,7 +32,8 @@ public final class Main extends JavaPlugin
     }
 
     @Override
-    public void onDisable() {
+    public void onDisable()
+    {
         if (instance != null) {instance = null;}
         getServer().getLogger().info("§4[CampfireChat] Plugin was shutdown!");
     }
