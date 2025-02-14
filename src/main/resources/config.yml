@@ -1,0 +1,25 @@
+# Join message settings
+custom-join:
+  toggle: true
+  message: §a[+] §f{player}
+
+# Quit message settings
+custom-quit:
+  toggle: true
+  message: §c[-] §f{player}
+
+# Global chat settings
+global-chat:
+  toggle: true
+  message: '{world_prefix} §f{player} >> {message}'
+
+# Local chat settings
+local-chat:
+  toggle: true
+  radius: 50
+  message: §7{player} >> {message}
+
+message:
+  NoRecipients: §4 Your message was not seen by anyone.
+  Reload: §a Config successfully reloaded
+  NoRights: §4 You do not have permission to use this command

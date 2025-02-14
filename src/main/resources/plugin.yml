@@ -2,3 +2,11 @@ name: campfire-chat
 version: '1.0.0'
 main: me.irinque.CampfireChat.Main
 api-version: '1.21'
+authors: [irinque]
+website: https://t.me/irinque
+commands:
+  reload-cfc:
+    description: "Reload plugin config"
+    aliases:
+      - rd
+    permission: campfire-chat.reload-cfc
