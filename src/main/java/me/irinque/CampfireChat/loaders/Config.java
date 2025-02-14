@@ -16,10 +16,13 @@ public class Config implements Runnable
         if (!get_file_config().exists())
         {
             plugin.getConfig().set("custom-join.toggle", true);
-            plugin.getConfig().set("custom-join.message", "§a[+] {player}");
+            plugin.getConfig().set("custom-join.message", "§a[+] §f{player}");
 
             plugin.getConfig().set("custom-quit.toggle", true);
-            plugin.getConfig().set("custom-quit.message", "§c[-] {player}");
+            plugin.getConfig().set("custom-quit.message", "§c[-] §f{player}");
+
+            plugin.getConfig().set("global-chat.toggle", true);
+            plugin.getConfig().set("global-chat.message", "{world_prefix} §f{player} >> {message}");
 
             plugin.saveConfig();
 
