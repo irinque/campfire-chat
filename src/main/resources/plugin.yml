@@ -8,3 +8,6 @@ commands:
   campfire-chat:
     description: "CampfireChat commands"
     aliases: [cfc]
+  message:
+    description: "Private message;"
+    aliases: [msg, tell, w, tellraw]
