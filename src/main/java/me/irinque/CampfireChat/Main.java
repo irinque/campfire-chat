@@ -1,11 +1,11 @@
 package me.irinque.CampfireChat;
 
-import me.irinque.CampfireChat.commands.Reload;
+import me.irinque.CampfireChat.commands.CampfireChat;
 import me.irinque.CampfireChat.handlers.PlayerDeath;
 import me.irinque.CampfireChat.handlers.PlayerJoin;
 import me.irinque.CampfireChat.handlers.PlayerMessage;
 import me.irinque.CampfireChat.handlers.PlayerQuit;
-import me.irinque.CampfireChat.tabcompleters.ReloadTabCompleter;
+import me.irinque.CampfireChat.tabcompleters.CampfireChatTabCompleter;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 
@@ -30,8 +30,8 @@ public final class Main extends JavaPlugin
         getServer().getPluginManager().registerEvents(new PlayerMessage(), this);
         getServer().getPluginManager().registerEvents(new PlayerDeath(), this);
 
-        getServer().getPluginCommand("reload-cfc").setExecutor(new Reload());
-        getServer().getPluginCommand("reload-cfc").setTabCompleter(new ReloadTabCompleter());
+        getServer().getPluginCommand("campfire-chat").setExecutor(new CampfireChat());
+        getServer().getPluginCommand("campfire-chat").setTabCompleter(new CampfireChatTabCompleter());
 
         getServer().getLogger().info("§a[CFC] Plugin is ready");
     }
