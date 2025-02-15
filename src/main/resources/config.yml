@@ -1,25 +1,40 @@
-# Join message settings
+# Join message settings:
+# {message} - Connected player;
 custom-join:
   toggle: true
-  message: §a[+] §f{player}
+  message: '§a[+] §f{player}'
 
-# Quit message settings
+# Quit message settings:
+# {message} - Disconnected player;
 custom-quit:
   toggle: true
-  message: §c[-] §f{player}
+  message: '§c[-] §f{player}'
 
-# Global chat settings
+# Global chat settings:
+# {player} - The player who sent the message;
+# {message} - Sent message;
+# {world_prefix} - Prefix which world the player is in;
 global-chat:
   toggle: true
   message: '{world_prefix} §f{player} >> {message}'
 
-# Local chat settings
+# Local chat settings:
+# {player} - The player who sent the message;
+# {message} - Sent message;
 local-chat:
   toggle: true
   radius: 50
-  message: §7{player} >> {message}
+  message: '§7{player} >> {message}'
+
+# Death message settings:
+# {player} - Nickname of dead player;
+# {death_sign} - Skull;
+# {death_message} - Standard minecraft death message(Outputs player nickname);
+custom-death:
+  toggle: true
+  message: '{death_sign} {player}'
 
 message:
-  NoRecipients: §4 Your message was not seen by anyone.
-  Reload: §a Config successfully reloaded
-  NoRights: §4 You do not have permission to use this command
+  NoRecipients: '§4 Your message was not seen by anyone.'
+  Reload: '§a Config successfully reloaded'
+  NoRights: '§4 You do not have permission to use this command'

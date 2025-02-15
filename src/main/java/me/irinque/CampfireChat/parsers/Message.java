@@ -9,6 +9,6 @@ public class Message
     public static String getMsg(String path)
     {
         String message = plugin.getConfig().getString("message." + path);
-        return "[CFchat]" + message;
+        return "[CFC]" + message;
     }
 }

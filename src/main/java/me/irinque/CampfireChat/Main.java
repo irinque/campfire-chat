@@ -1,13 +1,12 @@
 package me.irinque.CampfireChat;
 
 import me.irinque.CampfireChat.commands.Reload;
+import me.irinque.CampfireChat.handlers.PlayerDeath;
 import me.irinque.CampfireChat.handlers.PlayerJoin;
 import me.irinque.CampfireChat.handlers.PlayerMessage;
 import me.irinque.CampfireChat.handlers.PlayerQuit;
-import me.irinque.CampfireChat.loaders.Config;
 import me.irinque.CampfireChat.tabcompleters.ReloadTabCompleter;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.Bukkit;
 import java.io.File;
 
 public final class Main extends JavaPlugin
@@ -29,17 +28,18 @@ public final class Main extends JavaPlugin
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new PlayerQuit(), this);
         getServer().getPluginManager().registerEvents(new PlayerMessage(), this);
+        getServer().getPluginManager().registerEvents(new PlayerDeath(), this);
 
         getServer().getPluginCommand("reload-cfc").setExecutor(new Reload());
         getServer().getPluginCommand("reload-cfc").setTabCompleter(new ReloadTabCompleter());
 
-        getServer().getLogger().info("§a[CampfireChat] Plugin is ready");
+        getServer().getLogger().info("§a[CFC] Plugin is ready");
     }
 
     @Override
     public void onDisable()
     {
         if (instance != null) {instance = null;}
-        getServer().getLogger().info("§4[CampfireChat] Plugin was shutdown!");
+        getServer().getLogger().info("§4[CFC] Plugin was shutdown!");
     }
 }
