@@ -34,7 +34,7 @@ public class PlayerMessage implements Listener
         {
             int count_listeners = 0;
             int radius_trigger = (int) plugin.getConfig().get("local-chat.radius");
-            String message_template = plugin.getConfig().getString("global-chat.message");
+            String message_template = plugin.getConfig().getString("local-chat.message");
 
             event.setCancelled(true);
 
