@@ -1,0 +1,55 @@
+# VERSION: 1.0.0
+
+# Join message settings:
+# {message} - Connected player;
+custom-join:
+  toggle: true
+  message: '§a[+] §f{player}'
+
+# Quit message settings:
+# {message} - Disconnected player;
+custom-quit:
+  toggle: true
+  message: '§c[-] §f{player}'
+
+# Global chat settings:
+# {player} - The player who sent the message;
+# {message} - Sent message;
+# {world_prefix} - Prefix which world the player is in;
+global-chat:
+  toggle: true
+  message: '{world_prefix} §f{player} >> {message}'
+
+# Local chat settings:
+# {player} - The player who sent the message;
+# {message} - Sent message;
+local-chat:
+  toggle: true
+  radius: 50
+  message: '§7{player} >> {message}'
+
+# Death message settings:
+# {player} - Nickname of dead player;
+# {death_sign} - Skull;
+# {death_message} - Standard minecraft death message(Outputs player nickname);
+custom-death:
+  toggle: true
+  message: '{death_sign} {player}'
+
+# /tell settings:
+# {private_message_sign} - The symbol of the letter;
+# {sender} - Nickname of the player sending the message;
+# {receiver} - Nickname of the player receiving the message;
+# {message} - Private message text;
+custom-private-message:
+  toggle: true
+  message-receiver: '§b{private_message_sign} {sender} >> {message}'
+  message-sender: '§b{private_message_sign} {sender} -> {receiver} >> {message}'
+  notification: true
+
+message:
+  NoRecipients: '§4 Your message was not seen by anyone.'
+  Reload: '§a Config successfully reloaded.'
+  NoRights: '§4 You do not have permission to use this command.'
+  RecipientOffline: "§e The player with this nickname is not online."
+  EmptyMessage: "§e Unable to send an empty message."
