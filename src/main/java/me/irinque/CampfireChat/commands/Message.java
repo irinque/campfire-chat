@@ -17,7 +17,8 @@ public class Message implements CommandExecutor
     static Main plugin = Main.getInstance();
 
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
+    public boolean onCommand(CommandSender sender, Command command, String s, String[] args)
+    {
         Player player_sender = (Player) sender;
         StringBuilder string_builder = new StringBuilder();
         String message_receiver_template = plugin.getConfig().getString("custom-private-message.message-receiver");
